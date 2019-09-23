@@ -1,0 +1,50 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+            clone $p['Symfony\\Component\\Routing\\Annotation\\Route'],
+            clone $p['Symfony\\Component\\Routing\\Annotation\\Route'],
+            clone $p['Symfony\\Component\\Routing\\Annotation\\Route'],
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/video-list/{video}/like',
+                    '/video-list/{video}/dislike',
+                    '/video-list/{video}/unlike',
+                    '/video-list/{video}/undodislike',
+                ],
+                'name' => [
+                    'like_video',
+                    'dislike_video',
+                    'undo_like_video',
+                    'undo_dislike_video',
+                ],
+                'methods' => [
+                    [
+                        'POST',
+                    ],
+                    [
+                        'POST',
+                    ],
+                    [
+                        'POST',
+                    ],
+                    [
+                        'POST',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
+            $o[3],
+        ],
+        []
+    );
+
+}];

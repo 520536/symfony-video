@@ -1,0 +1,6 @@
+# config/packages/sb_redis.yaml
+sb_redis:
+    clients:
+        default:
+            $options:    []
+            $parameters: ['%env(REDIS_URL)%']
